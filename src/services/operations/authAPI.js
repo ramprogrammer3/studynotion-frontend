@@ -1,0 +1,57 @@
+import toast from "react-hot-toast";
+import { setLoading, setToken } from "../../slices/authSlice";
+import { resetCart } from "../../slices/cartSlice";
+import { setUser } from "../../slices/profileSlice";
+import { apiConnector } from "../apiconnector";
+import { endpoints } from "../apis";
+
+const {
+  LOGIN_API,
+  SENDOTP_API,
+  SIGNUP_API,
+  RESETPASSTOKEN_API,
+  RESETPASSWORD_API,
+} = endpoints;
+
+export const login = (email, password, navigate) => {
+  return async (dispatch) => {
+    dispatch(setLoading(true));
+    try {
+      const response = await apiConnector("POST", LOGIN_API, {
+        email,
+        password,
+      });
+      console.log(response);
+      if (!response.data.success) {
+        throw new Error(response.data.message);
+      }
+      dispatch(setToken(response.data.token));
+      dispatch(setUser(response.data.user));
+      localStorage.setItem("token", JSON.stringify(response.data.token));
+      navigate("/dashboard/my-profile");
+      toast.success(response.data.message);
+    } catch (error) {
+      dispatch(setLoading(false));
+      toast.error(error.response.data.message);
+    }
+  };
+};
+
+export const sendOtp = (email, navigate) => {
+  return async (dispatch) => {
+    dispatch(setLoading(true));
+    try {
+      const response = await apiConnector("POST", SENDOTP_API, { email });
+      console.log(response);
+      if (!response.data.success) {
+        throw new Error(response.data.message);
+      }
+      toast.success(response.data.message);
+      navigate("/verify-email");
+    } catch (error) {
+        console.log(error)
+      toast.error(error.response.data.message);
+    }
+    dispatch(setLoading(false));
+  };
+};
