@@ -116,3 +116,26 @@ export const getPasswordResetToken = (email, setEmailSent) => {
     dispatch(setLoading(false));
   };
 };
+
+export const resetPassword = (password, confirmPassword, token,navigate) => {
+  return async (dispatch) => {
+    dispatch(setLoading(true));
+    try {
+      const response = await apiConnector("POST", RESETPASSWORD_API, {
+        password,
+        confirmPassword,
+        token,
+      });
+
+      if (!response.data.success) {
+        throw new Error(response.data.message);
+      }
+
+      toast.success(response.data.message);
+      navigate("/login")
+    } catch (error) {
+      toast.error(error.response.data.message);
+    }
+    dispatch(setLoading(false));
+  };
+};
