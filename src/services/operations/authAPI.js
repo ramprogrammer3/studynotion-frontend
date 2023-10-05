@@ -49,9 +49,50 @@ export const sendOtp = (email, navigate) => {
       toast.success(response.data.message);
       navigate("/verify-email");
     } catch (error) {
-        console.log(error)
+      console.log(error);
       toast.error(error.response.data.message);
     }
+    dispatch(setLoading(false));
+  };
+};
+
+export const signUp =  (
+  accountType,
+  firstName,
+  lastName,
+  email,
+  password,
+  confirmPassword,
+  otp,
+  navigate
+) => {
+  return async (dispatch) => {
+    dispatch(setLoading(true));
+    try {
+      const response = await apiConnector("POST", SIGNUP_API, {
+        accountType,
+        firstName,
+        lastName,
+        email,
+        password,
+        confirmPassword,
+        otp,
+      });
+
+      if (!response.data.success) {
+        throw new Error(response.data.message);
+      }
+
+      console.log("success response", response);
+
+      toast.success(response.data.message);
+      navigate("/login");
+    } catch (error) {
+      toast.error(error.response.data.message);
+      navigate("/signup");
+      console.log("error", error);
+    }
+
     dispatch(setLoading(false));
   };
 };
