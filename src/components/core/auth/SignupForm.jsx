@@ -50,7 +50,6 @@ const SignupForm = () => {
 
     // send otp to the user
     dispatch(sendOtp(formData.email, navigate));
-    
   };
 
   // data to pass to Tab component

@@ -9,6 +9,7 @@ import Signup from './pages/Signup'
 import Error from "./pages/Error"
 import OpenRoute from './components/core/auth/OpenRoute'
 import VerifyEmail from './pages/VerifyEmail'
+import ForgetPassword from './pages/ForgetPassword'
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
 
         <Route path='/login' element={<OpenRoute> <Login /> </OpenRoute>} />
         <Route path='/verify-email' element = {<OpenRoute> <VerifyEmail /> </OpenRoute>} />
+        <Route path='/forget-password' element = {<OpenRoute> <ForgetPassword /> </OpenRoute>} />
 
         <Route path='/*' element={<Error />} />
 

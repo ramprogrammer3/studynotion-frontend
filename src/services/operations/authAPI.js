@@ -56,7 +56,7 @@ export const sendOtp = (email, navigate) => {
   };
 };
 
-export const signUp =  (
+export const signUp = (
   accountType,
   firstName,
   lastName,
@@ -93,6 +93,26 @@ export const signUp =  (
       console.log("error", error);
     }
 
+    dispatch(setLoading(false));
+  };
+};
+
+export const getPasswordResetToken = (email, setEmailSent) => {
+  return async (dispatch) => {
+    dispatch(setLoading(true));
+    try {
+      const response = await apiConnector("POST", RESETPASSTOKEN_API, {
+        email,
+      });
+      if (!response.data.success) {
+        throw new Error(response.data.message);
+      }
+      toast.success(response.data.message);
+
+      setEmailSent(true);
+    } catch (error) {
+      toast.error(error.response.data.message);
+    }
     dispatch(setLoading(false));
   };
 };
