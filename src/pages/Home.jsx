@@ -9,6 +9,7 @@ import CodeBlock2 from "../components/core/HomePage/CodeBlock2";
 import TimeLineSection from "../components/core/HomePage/TimeLineSection";
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
 import InstructorSection from "../components/core/HomePage/InstructorSection";
+import Footer from "../components/common/Footer";
 
 const Home = () => {
   return (
@@ -124,8 +125,9 @@ const Home = () => {
         </h2>
       </div>
 
-      
+      {/* footer  */}
 
+      <Footer />
 
     </div>
   );
