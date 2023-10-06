@@ -8,6 +8,7 @@ import CodeBlock from "../components/core/HomePage/CodeBlock";
 import CodeBlock2 from "../components/core/HomePage/CodeBlock2";
 import TimeLineSection from "../components/core/HomePage/TimeLineSection";
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
+import InstructorSection from "../components/core/HomePage/InstructorSection";
 
 const Home = () => {
   return (
@@ -112,6 +113,20 @@ const Home = () => {
           <LearningLanguageSection />
         </div>
       </div>
+
+      {/* section 3  */}
+
+      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+        <InstructorSection />
+
+        <h2 className="text-center text-4xl font-semibold mt-8">
+          Reviews from other learners{" "}
+        </h2>
+      </div>
+
+      
+
+
     </div>
   );
 };
