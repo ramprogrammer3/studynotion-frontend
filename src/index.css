@@ -15,3 +15,67 @@ body {
   animation: spinner-bulqg1 0.8s infinite linear alternate,
     spinner-oaa3wk 1.6s infinite linear;
 }
+
+.gradient5 {
+  background: var(
+    --gradient-05,
+    linear-gradient(118deg, #1fa2ff -3.62%, #12d8fa 50.44%, #a6ffcb 104.51%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient6 {
+  background: var(
+    --gradient-06,
+    linear-gradient(118deg, #ff512f -4.8%, #f09819 107.46%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient8 {
+  background: var(
+    --gradient-08,
+    linear-gradient(118deg, #e65c00 -6.05%, #f9d423 106.11%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.codeblock1 {
+  background: linear-gradient(
+    123.77deg,
+    #8a2be2 -6.46%,
+    orange 59.04%,
+    #f8f8ff 124.53%
+  );
+  border-radius: 100%;
+  -webkit-filter: blur(34px);
+  filter: blur(34px);
+  height: 257.05px;
+  left: calc(50% - 263.005px);
+  opacity: 0.2;
+  top: calc(50% - 175.995px);
+  -webkit-transform: matrix(1, 0, -0.03, 1, 0, 0);
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
+  width: 372.95px;
+}
+
+.codeblock2{
+    background: linear-gradient(118.19deg,#1fa2ff -3.62%,#12d8fa 50.44%,#a6ffcb 104.51%);
+    border-radius: 100%;
+    -webkit-filter: blur(34px);
+    filter: blur(34px);
+    height: 257.05px;
+    left: calc(50% - 263.005px);
+    opacity: .2;
+    top: calc(50% - 175.995px);
+    -webkit-transform: matrix(1,0,-.03,1,0,0);
+    transform: matrix(1,0,-.03,1,0,0);
+    width: 372.95px;
+
+}
