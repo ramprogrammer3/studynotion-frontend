@@ -8,3 +8,8 @@ export const endpoints = {
     RESETPASSTOKEN_API : BASE_URL + "/auth/reset-password-token",
     RESETPASSWORD_API : BASE_URL + "/auth/reset-password",
 }
+
+// CATAGORIES API
+export const categories = {
+    CATEGORIES_API: BASE_URL + "/course/showAllCategories",
+  }
