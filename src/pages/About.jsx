@@ -9,6 +9,7 @@ import foundingStory from "../assets/Images/FoundingStory.png";
 import StatsComponent from "../components/core/AboutPage/StatsComponent";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
 import ContactForm from "../components/contactPage/ContactForm";
+import Footer from "../components/common/Footer";
 
 const About = () => {
   return (
@@ -117,10 +118,18 @@ const About = () => {
 
       </section>
 
+      {/* section 6  */}
+
+      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+
+        <h2 className="text-center text-4xl font-semibold mt-8">Reviews from other learners </h2>
+
+      </div>
+
+      {/* footer section  */}
+                
+        <Footer />        
       
-
-
-
 
     </div>
   );
