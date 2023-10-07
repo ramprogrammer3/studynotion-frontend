@@ -3,6 +3,7 @@ import HighlightText from "../components/common/HighlightText";
 import banner1 from "../assets/Images/aboutus1.webp";
 import banner2 from "../assets/Images/aboutus2.webp";
 import banner3 from "../assets/Images/aboutus3.webp";
+import Quote from "../components/core/AboutPage/Quote";
 
 const About = () => {
   return (
@@ -29,6 +30,19 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* section 2 */}
+
+      <section className="border-b border-b-richblack-700">
+        <div className="mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-500">
+          <div className="h-[100px]"></div>
+            <Quote />
+        </div>
+      </section>
+
+      {/* section 3  */}
+
+
     </div>
   );
 };
