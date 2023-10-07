@@ -81,3 +81,9 @@ body {
 .homepage_bg{
   background: url("./assets/Images/bghome.svg");
 }
+
+.label{
+  --tw-text-opacity: 1;
+    color: rgb(241 242 255/var(--tw-text-opacity));
+    font-size: 14px;
+}
