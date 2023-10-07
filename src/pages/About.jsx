@@ -6,6 +6,7 @@ import banner3 from "../assets/Images/aboutus3.webp";
 import Quote from "../components/core/AboutPage/Quote";
 import StoryContent from "../components/core/AboutPage/StoryContent";
 import foundingStory from "../assets/Images/FoundingStory.png";
+import StatsComponent from "../components/core/AboutPage/StatsComponent";
 
 const About = () => {
   return (
@@ -97,6 +98,14 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* section 4  */}
+
+      <StatsComponent />
+
+
+
+
     </div>
   );
 };
